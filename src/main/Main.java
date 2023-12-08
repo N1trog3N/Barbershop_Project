@@ -90,11 +90,11 @@ public class Main {
             System.out.print("Выберите дату и время для бронирования (например, 2023-01-01 10:00): ");
             String dateTime = scanner.nextLine();
             System.out.print("Выберите барбера: ");
-            String pointA = scanner.nextLine();
+            String barberName = scanner.nextLine();
             System.out.print("Выберите адрес: ");
-            String pointB = scanner.nextLine();
+            String address = scanner.nextLine();
             Client client = (Client) currentUser;
-            Record record = patterns.BookingFacade.makeReservation(client, dateTime, pointA, pointB);
+            Record record = patterns.BookingFacade.makeReservation(client, dateTime, barberName, address);
 
             if (record != null) {
                 System.out.println("Бронирование выполнено успешно.");
